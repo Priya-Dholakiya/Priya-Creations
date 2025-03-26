@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayurvadik</title>
+    <!-- icon link attechment -->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+    <!-- stylesheet link attechment -->
+    <link rel="stylesheet" href="assets/css/stylesheet.css">
+    <!-- font-awesome link attechment -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- Online bootstrap link attachment -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- custom link attechment  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- header Start -->
+    <!--  Navbar -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="assets/images/logo.png" alt=""> AyuCare </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+
+                <!-- ✅ Shop Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="shop.html" id="shopDropdown" role="button">Shop</a>
+                    <ul class="dropdown-menu" aria-labelledby="shopDropdown">
+                        <li><a class="dropdown-item" href="#oils">Oils</a></li>
+                        <li><a class="dropdown-item" href="#sunscreens">Sunscreens</a></li>
+                        <li><a class="dropdown-item" href="#herbalmedicine">Herbal Medicines</a></li>
+                        <li><a class="dropdown-item" href="#haircare">Hair Care</a></li>
+                    </ul>
+                </li>
+
+                <!-- ✅ Treatments Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="treatment.html" id="treatmentDropdown" role="button">Treatments</a>
+                    <ul class="dropdown-menu" aria-labelledby="treatmentDropdown">
+                        <li><a class="dropdown-item" href="#skincare">Skin Care</a></li>
+                        <li><a class="dropdown-item" href="#haircare">Hair Care</a></li>
+                        <li><a class="dropdown-item" href="#detoxcleans">Detox & Cleansing</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa-solid fa-cart-plus"></i></a>
+                </li>
+            </ul>
+
+            <!-- ✅ Sign Up and Log In Buttons with Popups -->
+            <button class="btn btn-outline-success ms-3" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
+            <button class="btn btn-outline-primary ms-2" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>
+
+        </div>
+    </div>
+</nav>
+
+<!-- Sign Up Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="signupEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="signupEmail" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="signupPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="signupPassword" placeholder="Enter your password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password">
+                    </div>
+                    <button type="submit" class="btn btn-success">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Log In Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Log In</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="loginEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="loginPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Log In</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- header End -->
+    <!-- banner-start -->
+    <section class="banner">
+        <div class="overlay"></div>
+        <div class="container text-center">
+            <h1>स्वस्थ जीवन के लिए आयुर्वेद अपनाएं</h1>
+            <p>100% प्राकृतिक हर्बल उत्पादों के साथ स्वास्थ्य और ताजगी पाएं।</p>
+            <a href="#" class="btn btn-primary">Explore Now</a>
+        </div>
+    </section>
+    <!-- banner-end -->
+    <!-- about-start -->
+    <section class="about-section" style="background: #f9f9f9; padding: 80px 0;">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Image Column with Subtle Overlapping Images -->
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="about-img-container"
+                        style="width: 100%; max-width: 600px; height: 400px; border-radius: 12px; overflow: hidden; transition: transform 0.3s ease-in-out;">
+                        <img src="assets/images/about.avif" alt="Main Ayurvedic Image" class="img-fluid"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease-in-out;">
+                    </div>
+                </div>
+
+                <!-- Content Column -->
+                <div class="col-lg-6">
+                    <h2 class="section-title"
+                        style="font-size: 2.8rem; font-weight: bold; color: #198754; margin-bottom: 20px;">About Us</h2>
+                    <p class="section-description" style="font-size: 1.2rem; line-height: 1.8;">At <strong>Priya
+                            Ayurvedic</strong>, we offer 100% natural and herbal products. Our expert-crafted remedies
+                        help you lead a healthier life.</p>
+
+                    <ul class="about-list" style="list-style: none; padding: 0;">
+                        <li style="font-size: 1.1rem; margin: 10px 0;"><i class="fa-solid fa-leaf"
+                                style="color: #198754; margin-right: 8px;"></i> Pure & Natural Ingredients</li>
+                        <li style="font-size: 1.1rem; margin: 10px 0;"><i class="fa-solid fa-heart"
+                                style="color: #198754; margin-right: 8px;"></i> Customer Satisfaction Guaranteed</li>
+                        <li style="font-size: 1.1rem; margin: 10px 0;"><i class="fa-solid fa-hand-holding-heart"
+                                style="color: #198754; margin-right: 8px;"></i> Trusted by Thousands</li>
+                    </ul>
+
+                    <a href="#" class="btn btn-success mt-3 px-4"
+                        style="background-color: #198754; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Learn
+                        More</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- about-end -->
+    <!-- treatment-start -->
+    <section class="why-ayurveda" style="background: #f2f9f7; padding: 80px 0; max-width: 1200px; margin: 0 auto;">
+        <div class="container" style="padding: 60px 20px; text-align: center;">
+
+            <div class="header" style="margin-bottom: 40px;">
+                <img src="assets/images/head logo.svg" alt="Leaf Icon" style="width: 70px; margin-bottom: 10px;">
+                <h2 style="font-size: 36px; font-weight: bold; color: #333;">Why Pure Ayurveda</h2>
+                <p style="color: #28a745; font-size: 20px; margin-bottom: 30px;">Best For You</p>
+            </div>
+
+            <div class="circle-container" style="position: relative; width: 500px; height: 500px; margin: 0 auto;">
+
+                <!-- Circle Content -->
+                <div class="circle-content"
+                    style="position: absolute; width: 100%; height: 100%; border: 2px dotted #28a745; border-radius: 50%; display: flex; justify-content: center; align-items: center;">
+                    <img src="assets/images/circle.avif" alt="Ayurveda Icon"
+                        style="width: 500px; height: 500px; border-radius: 50%; object-fit: cover;">
+                </div>
+
+                <!-- Left Features -->
+                <div class="feature left"
+                    style="position: absolute; top: 15%; left: -250px; font-size: 18px; font-weight: bold; display: flex; align-items: center; flex-direction: row-reverse; text-align: right;">
+                    <div style="width: 80px; height: 0; border: 1px solid #28a745; margin: 0 15px;"></div>
+                    <span>100% Organic</span>
+                </div>
+
+                <div class="feature left"
+                    style="position: absolute; top: 30%; left: -250px; font-size: 18px; font-weight: bold; display: flex; align-items: center; flex-direction: row-reverse; text-align: right;">
+                    <div style="width: 80px; height: 0; border: 1px solid #28a745; margin: 0 15px;"></div>
+                    <span>Best Quality</span>
+                </div>
+
+                <div class="feature left"
+                    style="position: absolute; top: 45%; left: -250px; font-size: 18px; font-weight: bold; display: flex; align-items: center; flex-direction: row-reverse; text-align: right;">
+                    <div style="width: 80px; height: 0; border: 1px solid #28a745; margin: 0 15px;"></div>
+                    <span>Hygienic Product</span>
+                </div>
+
+                <div class="feature left"
+                    style="position: absolute; top: 60%; left: -250px; font-size: 18px; font-weight: bold; display: flex; align-items: center; flex-direction: row-reverse; text-align: right;">
+                    <div style="width: 80px; height: 0; border: 1px solid #28a745; margin: 0 15px;"></div>
+                    <span>Quality Tested</span>
+                </div>
+
+                <div class="feature left"
+                    style="position: absolute; top: 75%; left: -250px; font-size: 18px; font-weight: bold; display: flex; align-items: center; flex-direction: row-reverse; text-align: right;">
+                    <div style="width: 80px; height: 0; border: 1px solid #28a745; margin: 0 15px;"></div>
+                    <span>Health Care</span>
+                </div>
+
+                <!-- Right Features -->
+                <div class="feature right"
+                    style="position: absolute; top: 15%; right: -250px; font-size: 18px; font-weight: bold; display: flex; align-items: center; text-align: left;">
+                    <div style="width: 80px; height: 0; border: 1px solid #28a745; margin: 0 15px;"></div>
+                    <span>100% Natural</span>
+                </div>
+
+                <div class="feature right"
+                    style="position: absolute; top: 30%; right: -250px; font-size: 18px; font-weight: bold; display: flex; align-items: center; text-align: left;">
+                    <div style="width: 80px; height: 0; border: 1px solid #28a745; margin: 0 15px;"></div>
+                    <span>Eco-Friendly</span>
+                </div>
+
+                <div class="feature right"
+                    style="position: absolute; top: 45%; right: -250px; font-size: 18px; font-weight: bold; display: flex; align-items: center; text-align: left;">
+                    <div style="width: 80px; height: 0; border: 1px solid #28a745; margin: 0 15px;"></div>
+                    <span>Pure Ingredients</span>
+                </div>
+
+                <div class="feature right"
+                    style="position: absolute; top: 60%; right: -250px; font-size: 18px; font-weight: bold; display: flex; align-items: center; text-align: left;">
+                    <div style="width: 80px; height: 0; border: 1px solid #28a745; margin: 0 15px;"></div>
+                    <span>Safe for All</span>
+                </div>
+
+                <div class="feature right"
+                    style="position: absolute; top: 75%; right: -250px; font-size: 18px; font-weight: bold; display: flex; align-items: center; text-align: left;">
+                    <div style="width: 80px; height: 0; border: 1px solid #28a745; margin: 0 15px;"></div>
+                    <span>Certified Quality</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- treatment-end -->
+    <!-- category-start -->
+    <div class="category-container"
+        style="display: flex; align-items: center; justify-content: center; min-height: 100vh; overflow: hidden;">
+        <div class="carousel-container" id="carousel"
+            style="display: flex; align-items: center; gap: 30px; overflow: hidden; max-width: 90%; flex-wrap: wrap; justify-content: center;">
+
+            <div class="category" style="text-align: center; transition: 0.5s; width: 220px;">
+                <img src="assets/images/eye.avif" alt="Eye Care"
+                    style="width: 180px; height: 180px; object-fit: cover; border-radius: 50%; transition: all 0.5s; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);">
+                <h5 style="margin-top: 15px; font-size: 18px; font-weight: bold; color: #444; transition: 0.3s;">Eye
+                    Care</h5>
+            </div>
+
+            <div class="category" style="text-align: center; transition: 0.5s; width: 220px;">
+                <img src="assets/images/hair.avif" alt="Hair Care"
+                    style="width: 180px; height: 180px; object-fit: cover; border-radius: 50%; transition: all 0.5s; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);">
+                <h5 style="margin-top: 15px; font-size: 18px; font-weight: bold; color: #444; transition: 0.3s;">Hair
+                    Care</h5>
+            </div>
+
+            <div class="category" style="text-align: center; transition: 0.5s; width: 220px;">
+                <img src="assets/images/skin.avif" alt="Skin Care"
+                    style="width: 180px; height: 180px; object-fit: cover; border-radius: 50%; transition: all 0.5s; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);">
+                <h5 style="margin-top: 15px; font-size: 18px; font-weight: bold; color: #444; transition: 0.3s;">Skin
+                    Care</h5>
+            </div>
+
+            <div class="category" style="text-align: center; transition: 0.5s; width: 220px;">
+                <img src="assets/images/mens health.avif" alt="Men's Health"
+                    style="width: 180px; height: 180px; object-fit: cover; border-radius: 50%; transition: all 0.5s; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);">
+                <h5 style="margin-top: 15px; font-size: 18px; font-weight: bold; color: #444; transition: 0.3s;">Men's
+                    Health</h5>
+            </div>
+
+            <div class="category" style="text-align: center; transition: 0.5s; width: 220px;">
+                <img src="assets/images/womens health.avif" alt="Women's Health"
+                    style="width: 180px; height: 180px; object-fit: cover; border-radius: 50%; transition: all 0.5s; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);">
+                <h5 style="margin-top: 15px; font-size: 18px; font-weight: bold; color: #444; transition: 0.3s;">Women's
+                    Health</h5>
+            </div>
+
+            <div class="category" style="text-align: center; transition: 0.5s; width: 220px;">
+                <img src="assets/images/memory.avif" alt="Memory Health"
+                    style="width: 180px; height: 180px; object-fit: cover; border-radius: 50%; transition: all 0.5s; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);">
+                <h5 style="margin-top: 15px; font-size: 18px; font-weight: bold; color: #444; transition: 0.3s;">Memory
+                    Health</h5>
+            </div>
+
+            <div class="category" style="text-align: center; transition: 0.5s; width: 220px;">
+                <img src="assets/images/beauty.avif" alt="Beauty"
+                    style="width: 180px; height: 180px; object-fit: cover; border-radius: 50%; transition: all 0.5s; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);">
+                <h5 style="margin-top: 15px; font-size: 18px; font-weight: bold; color: #444; transition: 0.3s;">Beauty
+                </h5>
+            </div>
+
+            <div class="category" style="text-align: center; transition: 0.5s; width: 220px;">
+                <img src="assets/images/brain.avif" alt="Brain Health"
+                    style="width: 180px; height: 180px; object-fit: cover; border-radius: 50%; transition: all 0.5s; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);">
+                <h5 style="margin-top: 15px; font-size: 18px; font-weight: bold; color: #444; transition: 0.3s;">Brain
+                    Health</h5>
+            </div>
+
+        </div>
+    </div>
+    <!-- category-end -->
+    <!-- contact-start -->
+    <div style="background: linear-gradient(135deg, #198754, #198754); color: #fff; padding: 60px 20px;">
+        <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+
+            <h2 style="font-size: 40px; font-weight: bold; margin-bottom: 40px; letter-spacing: 1px;">
+                🌿 Ayurvedic Wellness Solutions
+            </h2>
+
+            <!-- Cards Container -->
+            <div style="display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+
+                <!-- Card 1 -->
+                <div style="flex: 1 1 calc(25% - 20px); background: #fff; color: #198754; border: 2px solid #198754; border-radius: 15px; text-align: center; padding: 20px; transition: 0.5s; box-shadow: 0 8px 16px rgba(0,0,0,0.1); cursor: pointer; max-width: 260px;"
+                    onmouseover="this.style.background='#198754'; this.style.color='#fff'; this.style.transform='scale(1.05)';"
+                    onmouseout="this.style.background='#fff'; this.style.color='#198754'; this.style.transform='scale(1)';">
+                    <div style="font-size: 45px;">🌿</div>
+                    <h3 style="font-size: 22px; margin: 15px 0 10px;">Boost Immunity</h3>
+                    <p style="font-size: 15px; line-height: 1.6;">Strengthen your immune system with herbal remedies.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div style="flex: 1 1 calc(25% - 20px); background: #fff; color: #198754; border: 2px solid #198754; border-radius: 15px; text-align: center; padding: 20px; transition: 0.5s; box-shadow: 0 8px 16px rgba(0,0,0,0.1); cursor: pointer; max-width: 260px;"
+                    onmouseover="this.style.background='#198754'; this.style.color='#fff'; this.style.transform='scale(1.05)';"
+                    onmouseout="this.style.background='#fff'; this.style.color='#198754'; this.style.transform='scale(1)';">
+                    <div style="font-size: 45px;">🍵</div>
+                    <h3 style="font-size: 22px; margin: 15px 0 10px;">Detox Your Body</h3>
+                    <p style="font-size: 15px; line-height: 1.6;">Cleanse and rejuvenate with natural detox formulas.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div style="flex: 1 1 calc(25% - 20px); background: #fff; color: #198754; border: 2px solid #198754; border-radius: 15px; text-align: center; padding: 20px; transition: 0.5s; box-shadow: 0 8px 16px rgba(0,0,0,0.1); cursor: pointer; max-width: 260px;"
+                    onmouseover="this.style.background='#198754'; this.style.color='#fff'; this.style.transform='scale(1.05)';"
+                    onmouseout="this.style.background='#fff'; this.style.color='#198754'; this.style.transform='scale(1)';">
+                    <div style="font-size: 45px;">🧘‍♀️</div>
+                    <h3 style="font-size: 22px; margin: 15px 0 10px;">Relax & De-stress</h3>
+                    <p style="font-size: 15px; line-height: 1.6;">Calm your mind with Ayurvedic techniques.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div style="flex: 1 1 calc(25% - 20px); background: #fff; color: #198754; border: 2px solid #198754; border-radius: 15px; text-align: center; padding: 20px; transition: 0.5s; box-shadow: 0 8px 16px rgba(0,0,0,0.1); cursor: pointer; max-width: 260px;"
+                    onmouseover="this.style.background='#198754'; this.style.color='#fff'; this.style.transform='scale(1.05)';"
+                    onmouseout="this.style.background='#fff'; this.style.color='#198754'; this.style.transform='scale(1)';">
+                    <div style="font-size: 45px;">🌺</div>
+                    <h3 style="font-size: 22px; margin: 15px 0 10px;">Healthy Skin</h3>
+                    <p style="font-size: 15px; line-height: 1.6;">Enhance your skin glow with herbal skincare products.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- contact-end -->
+    <!-- choose-start -->
+    <section class="achievements" style="background-color: #f2f9f7; padding: 70px 0;">
+        <div class="container text-center">
+            <div class="mb-5">
+                <h2 style="font-weight: bold; margin-top: 20px;">Benefit From Choosing The Best</h2>
+                <p style="color: #198754;">Our Recent Achievements</p>
+            </div>
+
+            <div class="row" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+                <!-- Card 1 -->
+                <div class="col-lg-3 col-md-4 col-sm-6" style="display: flex; justify-content: center;">
+                    <div class="achievement-card">
+                        <img src="assets/images/year.avif" alt="Experience">
+                        <h3 style="margin-top: 20px;">25</h3>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-3 col-md-4 col-sm-6" style="display: flex; justify-content: center;">
+                    <div class="achievement-card">
+                        <img src="assets/images/happy.avif" alt="Customers">
+                        <h3 style="margin-top: 20px;">50k+</h3>
+                        <p>Happy Customers</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-lg-3 col-md-4 col-sm-6" style="display: flex; justify-content: center;">
+                    <div class="achievement-card">
+                        <img src="assets/images/products.avif" alt="Products">
+                        <h3 style="margin-top: 20px;">800+</h3>
+                        <p>Products</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-lg-3 col-md-4 col-sm-6" style="display: flex; justify-content: center;">
+                    <div class="achievement-card">
+                        <img src="assets/images/pure.avif" alt="Purity">
+                        <h3 style="margin-top: 20px;">100%</h3>
+                        <p>Product Purity</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- choose-end -->
+    <!-- Review-start -->
+    <div id="reviewCarousel" class="carousel slide"
+        style="max-width: 1100px; margin: 50px auto; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); overflow: hidden;">
+
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1" style="background-color: #28a745;"></button>
+            <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="1" aria-label="Slide 2"
+                style="background-color: #28a745;"></button>
+            <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="2" aria-label="Slide 3"
+                style="background-color: #28a745;"></button>
+        </div>
+
+        <!-- Carousel Items -->
+        <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active" style="text-align: center; background: #f9f9f9; padding: 60px;">
+                <img src="assets/images/user1.avif" alt="User 1"
+                    style="border-radius: 50%; width: 120px; height: 120px; margin-bottom: 20px;">
+                <h3 style="color: #333; font-size: 22px;">Priya Dholakiya</h3>
+                <p style="color: #555; font-size: 18px; line-height: 1.6;">"Excellent service! The products were
+                    authentic and delivered on time. Highly recommend!"</p>
+                <div style="color: #ffc107; font-size: 22px;">★★★★★</div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item" style="text-align: center; background: #fff; padding: 60px;">
+                <img src="assets/images/user2.avif" alt="User 2"
+                    style="border-radius: 50%; width: 120px; height: 120px; margin-bottom: 20px;">
+                <h3 style="color: #333; font-size: 22px;">Amit Sharma</h3>
+                <p style="color: #555; font-size: 18px; line-height: 1.6;">"The ayurvedic oils really helped me with my
+                    joint pain. Great quality and packaging!"</p>
+                <div style="color: #ffc107; font-size: 22px;">★★★★☆</div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item" style="text-align: center; background: #f9f9f9; padding: 60px;">
+                <img src="assets/images/user3.avif" alt="User 3"
+                    style="border-radius: 50%; width: 120px; height: 120px; margin-bottom: 20px;">
+                <h3 style="color: #333; font-size: 22px;">Neha Patel</h3>
+                <p style="color: #555; font-size: 18px; line-height: 1.6;">"Amazing experience with the detox and
+                    cleansing oils. Very effective and safe!"</p>
+                <div style="color: #ffc107; font-size: 22px;">★★★★★</div>
+            </div>
+
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev"
+            style="width: 5%;">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next"
+            style="width: 5%;">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+    </div>
+
+    <!-- Review-end -->
+    <!-- footer-start -->
+    <footer>
+        <div style="background: #000; color: #fff; padding: 60px 20px;">
+            <div
+                style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+
+                <!-- Top Products -->
+                <div style="flex: 1 1 calc(25% - 20px); min-width: 250px; margin-bottom: 30px;">
+                    <h5 style="font-weight: bold; margin-bottom: 20px;">Top Products</h5>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">Black Organic
+                                Tea</a></li>
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">Loose Leaf Tea</a>
+                        </li>
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">Oolong Tea</a>
+                        </li>
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">Green Tea</a></li>
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">Sencha Tea</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Legal Information -->
+                <div style="flex: 1 1 calc(25% - 20px); min-width: 250px; margin-bottom: 30px;">
+                    <h5 style="font-weight: bold; margin-bottom: 20px;">Legal Information</h5>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">About Us</a></li>
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">Privacy Policy</a>
+                        </li>
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">Terms &
+                                Conditions</a></li>
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">Customer
+                                Service</a></li>
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">Return Policy</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter & About -->
+                <div style="flex: 1 1 calc(50% - 20px); min-width: 300px; margin-bottom: 30px;">
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <i style="font-size: 28px; color: #198754; margin-right: 10px;">🍃</i>
+                        <h5 style="margin: 0;">Pure Ayurveda</h5>
+                    </div>
+
+                    <div style="display: flex; background: #fff; border-radius: 50px; padding: 5px; overflow: hidden;">
+                        <input type="email" placeholder="Subscribe newsletter"
+                            style="border: none; outline: none; padding: 10px 15px; width: 70%; font-size: 14px;">
+                        <button
+                            style="background: #198754; color: #fff; border: none; padding: 10px 25px; border-radius: 50px; cursor: pointer; transition: 0.3s;">Subscribe
+                            Now</button>
+                    </div>
+
+                    <p style="margin-top: 20px; font-size: 14px; color: #bbb;">
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div
+            style="background: #198754; color: #000; text-align: center; padding: 15px 0; font-size: 14px; width: 100%;">
+            Copyright © 2020-2023. All right reserved. Pure Ayurveda
+        </div>
+    </footer>
+
+    <!-- footer-end -->
+    <button class="btn btn-sm btn-primary rounded-circle position-fixed bottom-0 end-0 translate-middle d-none"
+        onclick="scrollToTop()" id="back-to-up">
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </button>
+    <!-- Online js link attachment -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>window.onscroll = () => {
+            toggleTopButton();
+        }
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleTopButton() {
+            if (document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20) {
+                document.getElementById('back-to-up').classList.remove('d-none');
+            } else {
+                document.getElementById('back-to-up').classList.add('d-none');
+            }
+        }</script>
+</body>
+
+</html>

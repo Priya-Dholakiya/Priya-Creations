@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayurvadik</title>
+    <!-- icon link attechment -->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+    <!-- stylesheet link attechment -->
+    <link rel="stylesheet" href="assets/css/stylesheet.css">
+    <!-- font-awesome link attechment -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- Online bootstrap link attachment -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- custom link attechment  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- header Start -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="assets/images/logo.png" alt=""> AyuCare </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+    
+                    <!-- ✅ Shop Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="shop.html" id="shopDropdown" role="button">Shop</a>
+                        <ul class="dropdown-menu" aria-labelledby="shopDropdown">
+                            <li><a class="dropdown-item" href="#oils">Oils</a></li>
+                            <li><a class="dropdown-item" href="#sunscreens">Sunscreens</a></li>
+                            <li><a class="dropdown-item" href="#herbalmedicine">Herbal Medicines</a></li>
+                            <li><a class="dropdown-item" href="#haircare">Hair Care</a></li>
+                        </ul>
+                    </li>
+    
+                    <!-- ✅ Treatments Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="treatment.html" id="treatmentDropdown" role="button">Treatments</a>
+                        <ul class="dropdown-menu" aria-labelledby="treatmentDropdown">
+                            <li><a class="dropdown-item" href="#skincare">Skin Care</a></li>
+                            <li><a class="dropdown-item" href="#haircare">Hair Care</a></li>
+                            <li><a class="dropdown-item" href="#detoxcleans">Detox & Cleansing</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-cart-plus"></i></a>
+                    </li>
+                </ul>
+    
+                <!-- ✅ Sign Up and Log In Buttons with Popups -->
+                <button class="btn btn-outline-success ms-3" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
+                <button class="btn btn-outline-primary ms-2" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>
+    
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="signupEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="signupEmail" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signupPassword" placeholder="Enter your password">
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password">
+                        </div>
+                        <button type="submit" class="btn btn-success">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Log In Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Log In</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Log In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header End -->
+    <!-- banner-start -->
+    <section class="banner">
+        <div class="overlay"></div>
+        <div class="container text-center">
+            <h1>स्वस्थ जीवन के लिए आयुर्वेद अपनाएं</h1>
+            <p>100% प्राकृतिक हर्बल उत्पादों के साथ स्वास्थ्य और ताजगी पाएं।</p>
+            <a href="#" class="btn btn-primary">Explore Now</a>
+        </div>
+    </section>
+
+    <!-- banner-end -->
+    <!-- about-team-section-start -->
+    <section class="team-section" style="padding: 60px 0; text-align: center; background: #f4f4f4;">
+        <h2 style="font-size: 40px; color: #198754; font-weight: 700;">Our Experts</h2>
+        <p style="color: #6c757d; font-size: 18px; margin-bottom: 40px;">Meet Our Ayurvedic Professionals</p>
+
+        <div class="container">
+            <div class="row gy-4">
+
+                <!-- Team Member 1 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card"
+                        style="border: none; transition: 0.4s; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); background: #198754; color: white;">
+                        <img src="assets/images/team1.jpg" alt="John Doe" style="width: 100%; border-radius: 0px;">
+                        <div class="card-body" style="text-align: center;">
+                            <h5 style="font-weight: 700; font-size: 22px;">John Doe</h5>
+                            <p style="font-size: 16px;">Team Leader</p>
+                            <p>Guiding the team towards excellence.</p>
+                            <div class="social-icons" style="margin-top: 15px;">
+                                <a href="#" style="color: white; font-size: 24px; margin: 0 8px; transition: 0.3s;"
+                                    onmouseover="this.style.color='#1877F2'" onmouseout="this.style.color='white'">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" style="color: white; font-size: 24px; margin: 0 8px; transition: 0.3s;"
+                                    onmouseover="this.style.color='#1DA1F2'" onmouseout="this.style.color='white'">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" style="color: white; font-size: 24px; margin: 0 8px; transition: 0.3s;"
+                                    onmouseover="this.style.color='#C13584'" onmouseout="this.style.color='white'">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" style="color: white; font-size: 24px; margin: 0 8px; transition: 0.3s;"
+                                    onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='white'">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card"
+                        style="border: none; transition: 0.4s; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); background: #198754; color: white;">
+                        <img src="assets/images/team2.jpg" alt="Nancy Martin" style="width: 100%; border-radius: 0px;">
+                        <div class="card-body" style="text-align: center;">
+                            <h5 style="font-weight: 700; font-size: 22px;">Nancy Martin</h5>
+                            <p style="font-size: 16px;">Manager</p>
+                            <p>Ensuring seamless operations with precision.</p>
+                            <div class="social-icons" style="margin-top: 15px;">
+                                <a href="#" style="color: white; font-size: 24px; margin: 0 8px; transition: 0.3s;"
+                                    onmouseover="this.style.color='#1877F2'" onmouseout="this.style.color='white'">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" style="color: white; font-size: 24px; margin: 0 8px; transition: 0.3s;"
+                                    onmouseover="this.style.color='#1DA1F2'" onmouseout="this.style.color='white'">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" style="color: white; font-size: 24px; margin: 0 8px; transition: 0.3s;"
+                                    onmouseover="this.style.color='#C13584'" onmouseout="this.style.color='white'">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" style="color: white; font-size: 24px; margin: 0 8px; transition: 0.3s;"
+                                    onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='white'">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card"
+                        style="border: none; transition: 0.4s; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); background: #198754; color: white;">
+                        <img src="assets/images/team3.jpg" alt="Dan Brock" style="width: 100%; border-radius: 0px;">
+                        <div class="card-body" style="text-align: center;">
+                            <h5 style="font-weight: 700; font-size: 22px;">Dan Brock</h5>
+                            <p style="font-size: 16px;">CEO</p>
+                            <p>Leading with vision and innovation in Ayurveda.</p>
+                            <div class="social-icons" style="margin-top: 15px;">
+                                <a href="#" style="color: white; font-size: 24px; margin: 0 8px; transition: 0.3s;"
+                                    onmouseover="this.style.color='#1877F2'" onmouseout="this.style.color='white'">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" style="color: white; font-size: 24px; margin: 0 8px; transition: 0.3s;"
+                                    onmouseover="this.style.color='#1DA1F2'" onmouseout="this.style.color='white'">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" style="color: white; font-size: 24px; margin: 0 8px; transition: 0.3s;"
+                                    onmouseover="this.style.color='#C13584'" onmouseout="this.style.color='white'">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" style="color: white; font-size: 24px; margin: 0 8px; transition: 0.3s;"
+                                    onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='white'">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card"
+                        style="border: none; transition: 0.4s; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); background: #198754; color: white;">
+                        <img src="assets/images/team4.jpg" alt="Dan Brock" style="width: 100%; border-radius: 0px;">
+                        <div class="card-body" style="text-align: center;">
+                            <h5 style="font-weight: 700; font-size: 22px;">Rouis Weons</h5>
+                            <p style="font-size: 16px;">Farmer</p>
+                            <p>Cultivating pure and organic Ayurvedic ingredients.</p>
+                            <div class="social-icons" style="margin-top: 15px;">
+                                <a href="#" style="color: white; font-size: 24px; margin: 0 8px; transition: 0.3s;"
+                                    onmouseover="this.style.color='#1877F2'" onmouseout="this.style.color='white'">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" style="color: white; font-size: 24px; margin: 0 8px; transition: 0.3s;"
+                                    onmouseover="this.style.color='#1DA1F2'" onmouseout="this.style.color='white'">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" style="color: white; font-size: 24px; margin: 0 8px; transition: 0.3s;"
+                                    onmouseover="this.style.color='#C13584'" onmouseout="this.style.color='white'">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" style="color: white; font-size: 24px; margin: 0 8px; transition: 0.3s;"
+                                    onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='white'">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- about-team-section-end -->
+    <!-- section-start -->
+    <section class="mission-section">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Text Content -->
+                <div class="col-lg-6">
+                    <div class="mission-text">
+                        <h5>Our Mission</h5>
+                        <h2>Your Health is Our Priority</h2>
+                        <p>
+                            Aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+                            justo.
+                            Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+                        </p>
+                        <p>
+                            Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus.
+                        </p>
+                        <a href="#" class="btn">Meet us Better</a>
+                    </div>
+                </div>
+
+                <!-- Image Section -->
+                <div class="col-lg-6">
+                    <div class="img-box">
+                        <img src="assets/images/big-img.avif" alt="Main Image" class="main-img">
+                        <img src="assets/images/small.avif" alt="Small Image" class="small-img">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- section-end -->
+    <!-- procedure-start -->
+    <section class="procedures-section">
+        <div class="container">
+            <h3 class="section-subtitle">See How We Work</h3>
+            <h2 class="section-title">Our Procedures</h2>
+            <div class="row text-center mt-5">
+
+                <!-- Step 1 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="step-card">
+                        <div class="icon-circle">
+                            <img src="assets/images/step1.avif" alt="Step 1">
+                        </div>
+                        <h3 class="step-title">Step 01</h3>
+                        <p class="step-subtitle" style="color: #198754; font-weight: bold;">Abhyanga </p>
+                        <p class="step-text">A full-body warm oil massage using herbal oils.
+                            It improves blood circulation, reduces stress, and nourishes the skin.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="step-card">
+                        <div class="icon-circle">
+                            <img src="assets/images/step2.avif" alt="Step 2">
+                        </div>
+                        <h3 class="step-title">Step 02</h3>
+                        <p class="step-subtitle" style="color: #198754; font-weight: bold;">Shirodharan</p>
+                        <p class="step-text">Warm herbal oil is gently poured the forehead in a continuous stream.
+                            This calms the nervous system and alleviates stress and anxiety.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="step-card">
+                        <div class="icon-circle">
+                            <img src="assets/images/step3.avif" alt="Step 3">
+                        </div>
+                        <h3 class="step-title">Step 03</h3>
+                        <p class="step-subtitle" style="color: #198754;  font-weight: bold;">Panchakarma Detox Therapy
+                        </p>
+                        <p class="step-text">A five-step detox therapy that removes toxins from the body.
+                            It restores balance and boosts immunity.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="step-card">
+                        <div class="icon-circle">
+                            <img src="assets/images/step4.avif" alt="Step 4">
+                        </div>
+                        <h3 class="step-title">Step 04</h3>
+                        <p class="step-subtitle" style="color: #198754; font-weight: bold;"> Nasya</p>
+                        <p class="step-text">Medicinal oils or powders are administered through the nostrils.
+                            It relieves sinus issues, migraines, and congestion.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- procedure-end -->
+    <!-- category-start -->
+    <section class="categories">
+        <div class="container">
+            <h2>Categories</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+            <div class="row g-4">
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-card">
+                        <img src="assets/images/img1.avif" alt="Category 1">
+                        <div class="category-overlay">
+                            <h3>Lorem Ipsum is simply dummy</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-card">
+                        <img src="assets/images/img2.avif" alt="Category 2">
+                        <div class="category-overlay">
+                            <h3>Lorem Ipsum is simply dummy</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-card">
+                        <img src="assets/images/img3.avif" alt="Category 3">
+                        <div class="category-overlay">
+                            <h3>Lorem Ipsum is simply dummy</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6">
+                    <div class="category-card">
+                        <img src="assets/images/img4.avif" alt="Category 4">
+                        <div class="category-overlay">
+                            <h3>Lorem Ipsum is simply dummy</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6">
+                    <div class="category-card">
+                        <img src="assets/images/img5.avif" alt="Category 5">
+                        <div class="category-overlay">
+                            <h3>Lorem Ipsum is simply dummy</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- category-end -->
+    <!-- footer-start -->
+    <footer>
+        <div style="background: #000; color: #fff; padding: 60px 20px;">
+            <div
+                style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+
+                <!-- Top Products -->
+                <div style="flex: 1 1 calc(25% - 20px); min-width: 250px; margin-bottom: 30px;">
+                    <h5 style="font-weight: bold; margin-bottom: 20px;">Top Products</h5>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">Black Organic
+                                Tea</a></li>
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">Loose Leaf Tea</a>
+                        </li>
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">Oolong Tea</a>
+                        </li>
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">Green Tea</a></li>
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">Sencha Tea</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Legal Information -->
+                <div style="flex: 1 1 calc(25% - 20px); min-width: 250px; margin-bottom: 30px;">
+                    <h5 style="font-weight: bold; margin-bottom: 20px;">Legal Information</h5>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">About Us</a></li>
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">Privacy Policy</a>
+                        </li>
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">Terms &
+                                Conditions</a></li>
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">Customer
+                                Service</a></li>
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">Return Policy</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter & About -->
+                <div style="flex: 1 1 calc(50% - 20px); min-width: 300px; margin-bottom: 30px;">
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <i style="font-size: 28px; color: #198754; margin-right: 10px;">🍃</i>
+                        <h5 style="margin: 0;">Pure Ayurveda</h5>
+                    </div>
+
+                    <div style="display: flex; background: #fff; border-radius: 50px; padding: 5px; overflow: hidden;">
+                        <input type="email" placeholder="Subscribe newsletter"
+                            style="border: none; outline: none; padding: 10px 15px; width: 70%; font-size: 14px;">
+                        <button
+                            style="background: #198754; color: #fff; border: none; padding: 10px 25px; border-radius: 50px; cursor: pointer; transition: 0.3s;">Subscribe
+                            Now</button>
+                    </div>
+
+                    <p style="margin-top: 20px; font-size: 14px; color: #bbb;">
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div
+            style="background: #198754; color: #000; text-align: center; padding: 15px 0; font-size: 14px; width: 100%;">
+            Copyright © 2020-2023. All right reserved. Pure Ayurveda
+        </div>
+    </footer>
+
+    <!-- footer-end -->
+    <button class="btn btn-sm btn-primary rounded-circle position-fixed bottom-0 end-0 translate-middle d-none"
+        onclick="scrollToTop()" id="back-to-up">
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </button>
+    <!-- Online js link attachment -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>window.onscroll = () => {
+            toggleTopButton();
+        }
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleTopButton() {
+            if (document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20) {
+                document.getElementById('back-to-up').classList.remove('d-none');
+            } else {
+                document.getElementById('back-to-up').classList.add('d-none');
+            }
+        }</script>
+</body>
+
+</html>

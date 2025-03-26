@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayurvadik</title>
+    <!-- icon link attechment -->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+    <!-- stylesheet link attechment -->
+    <link rel="stylesheet" href="assets/css/stylesheet.css">
+    <!-- font-awesome link attechment -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- Online bootstrap link attachment -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- custom link attechment  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- header Start -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="assets/images/logo.png" alt=""> AyuCare </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+    
+                    <!-- ✅ Shop Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="shop.html" id="shopDropdown" role="button">Shop</a>
+                        <ul class="dropdown-menu" aria-labelledby="shopDropdown">
+                            <li><a class="dropdown-item" href="#oils">Oils</a></li>
+                            <li><a class="dropdown-item" href="#sunscreens">Sunscreens</a></li>
+                            <li><a class="dropdown-item" href="#herbalmedicine">Herbal Medicines</a></li>
+                            <li><a class="dropdown-item" href="#haircare">Hair Care</a></li>
+                        </ul>
+                    </li>
+    
+                    <!-- ✅ Treatments Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="treatment.html" id="treatmentDropdown" role="button">Treatments</a>
+                        <ul class="dropdown-menu" aria-labelledby="treatmentDropdown">
+                            <li><a class="dropdown-item" href="#skincare">Skin Care</a></li>
+                            <li><a class="dropdown-item" href="#haircare">Hair Care</a></li>
+                            <li><a class="dropdown-item" href="#detoxcleans">Detox & Cleansing</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-cart-plus"></i></a>
+                    </li>
+                </ul>
+    
+                <!-- ✅ Sign Up and Log In Buttons with Popups -->
+                <button class="btn btn-outline-success ms-3" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
+                <button class="btn btn-outline-primary ms-2" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>
+    
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="signupEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="signupEmail" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signupPassword" placeholder="Enter your password">
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password">
+                        </div>
+                        <button type="submit" class="btn btn-success">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Log In Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Log In</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Log In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header End -->
+    <!-- treatment-start -->
+    <div style="text-align: center; padding: 60px; background: linear-gradient(135deg, #f9f9f9, #e6e6e6);">
+        <h1 style="font-size: 42px; color: #333;">Our <span style="color: #28a745;">Treatments</span></h1>
+        <p style="font-size: 18px; color: #555;">Experience the power of Ayurvedic therapies for holistic wellness.</p>
+    </div>
+
+    <!-- Treatments Section -->
+    <div
+        style="display: flex; flex-wrap: wrap; justify-content: space-evenly; gap: 30px; padding: 50px; background: #fff;">
+
+        <!-- Treatment Card 1 -->
+        <div style="width: 30%; background: #f5f5f5; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); overflow: hidden; transition: 0.4s; cursor: pointer;"
+            onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.15)';"
+            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.1)';">
+            <img src="assets/images/detox.avif" alt="Detox Therapy" style="width: 100%; height: auto;">
+            <div style="padding: 25px; text-align: center;">
+                <h2 style="color: #28a745;">Detox Therapy</h2>
+                <p style="color: #666; line-height: 1.6;">Eliminate toxins and rejuvenate your body naturally with our
+                    herbal detox program.</p>
+                <button
+                    style="background: #28a745; color: white; border: none; padding: 12px 30px; cursor: pointer; border-radius: 5px;">Explore</button>
+            </div>
+        </div>
+
+        <!-- Treatment Card 2 -->
+        <div style="width: 30%; background: #f5f5f5; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); overflow: hidden; transition: 0.4s; cursor: pointer;"
+            onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.15)';"
+            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.1)';">
+            <img src="assets/images/pain.avif" alt="Pain Relief" style="width: 100%; height: auto;">
+            <div style="padding: 25px; text-align: center;">
+                <h2 style="color: #ff6347;">Pain Relief</h2>
+                <p style="color: #666; line-height: 1.6;">Natural therapies and Ayurvedic oils for chronic pain and
+                    joint relief.</p>
+                <button
+                    style="background: #ff6347; color: white; border: none; padding: 12px 30px; cursor: pointer; border-radius: 5px;">Explore</button>
+            </div>
+        </div>
+
+        <!-- Treatment Card 3 -->
+        <div style="width: 30%; background: #f5f5f5; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); overflow: hidden; transition: 0.4s; cursor: pointer;"
+            onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.15)';"
+            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.1)';">
+            <img src="assets/images/skin glow.avif" alt="Skin Glow" style="width: 100%; height: auto;">
+            <div style="padding: 25px; text-align: center;">
+                <h2 style="color: #ffc107;">Skin Glow Therapy</h2>
+                <p style="color: #666; line-height: 1.6;">Get radiant skin with Ayurvedic facials and herbal treatments.
+                </p>
+                <button
+                    style="background: #ffc107; color: white; border: none; padding: 12px 30px; cursor: pointer; border-radius: 5px;">Explore</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- treatment-end -->
+    <!-- skin-care-start -->
+    <div style="text-align: center; padding: 60px; background: linear-gradient(135deg, #f3f4f6, #e2e8f0);"
+        id="skincare">
+        <h1 style="font-size: 42px; color: #333;">Skin Care <span style="color: #28a745;">Treatments</span></h1>
+        <p style="font-size: 18px; color: #555;">Discover natural Ayurvedic skin solutions for healthy, glowing skin.
+        </p>
+    </div>
+
+    <!-- Skin Care Section with Images -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; padding: 60px; background: #ffffff;">
+
+        <!-- Left Side - 4 Small Images -->
+        <div style="width: 48%; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+
+            <div style="overflow: hidden; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: 0.4s; cursor: pointer;"
+                onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+                <img src="assets/images/skin1.avif" alt="Herbal Facial"
+                    style="width: 100%; height: 100%; object-fit: cover;">
+                <h3 style="text-align: center; color: #ff6347; padding: 10px 0;">Herbal Facial</h3>
+            </div>
+
+            <div style="overflow: hidden; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: 0.4s; cursor: pointer;"
+                onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+                <img src="assets/images/skin2.avif" alt="Anti-Aging"
+                    style="width: 100%; height: 100%; object-fit: cover;">
+                <h3 style="text-align: center; color: #007bff; padding: 10px 0;">Anti-Aging</h3>
+            </div>
+
+            <div style="overflow: hidden; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: 0.4s; cursor: pointer;"
+                onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+                <img src="assets/images/skin3.avif" alt="Acne Treatment"
+                    style="width: 100%; height: 100%; object-fit: cover;">
+                <h3 style="text-align: center; color: #28a745; padding: 10px 0;">Acne Treatment</h3>
+            </div>
+
+            <div style="overflow: hidden; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: 0.4s; cursor: pointer;"
+                onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+                <img src="assets/images/skin4.avif" alt="Glow Therapy"
+                    style="width: 100%; height: 100%; object-fit: cover;">
+                <h3 style="text-align: center; color: #ffc107; padding: 10px 0;">Glow Therapy</h3>
+            </div>
+
+        </div>
+
+        <!-- Right Side - 1 Large Image with Content -->
+        <div style="width: 48%; display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center; background: #f9f9f9; border-radius: 12px; box-shadow: 0 12px 35px rgba(0,0,0,0.1); padding: 40px; transition: 0.4s;"
+            onmouseover="this.style.transform='scale(1.02)';" onmouseout="this.style.transform='scale(1)';">
+
+            <img src="assets/images/skin5.avif" alt="Main Skin Treatment"
+                style="width: 100%; border-radius: 12px; margin-bottom: 20px;">
+
+            <h2 style="color: #28a745; font-size: 32px;">Advanced Skin Therapy</h2>
+            <p style="color: #555; font-size: 18px;">Experience the best Ayurvedic treatments designed for glowing and
+                healthy skin. Our customized skin care plans offer visible results.</p>
+            <button
+                style="background: #28a745; color: #fff; padding: 12px 30px; border: none; border-radius: 8px; cursor: pointer; transition: 0.3s;"
+                onmouseover="this.style.background='#218838';" onmouseout="this.style.background='#28a745';">
+                Learn More
+            </button>
+        </div>
+
+    </div>
+
+    <!-- skin-care-end -->
+    <!-- haircare-start -->
+    <div style="padding: 60px; background: linear-gradient(135deg, #f0f4f8, #e0e7ff); border-radius: 12px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); transition: 0.4s; max-width: 1200px; margin: 50px auto; overflow: hidden; position: relative;"
+        id="haircare">
+
+        <!-- Section Title -->
+        <h1 style="font-size: 42px; color: #333; text-align: center; margin-bottom: 40px;">
+            Hair Care <span style="color: #28a745;">Treatments</span>
+        </h1>
+
+        <!-- Section Content -->
+        <div style="display: flex; justify-content: space-between; gap: 30px; flex-wrap: wrap;">
+
+            <!-- Large Image with Content -->
+            <div style="width: 55%; display: flex; flex-direction: column; justify-content: center; text-align: center; background: #f9f9f9; border-radius: 12px; box-shadow: 0 12px 35px rgba(0,0,0,0.1); padding: 50px; transition: 0.4s; position: relative; overflow: hidden;"
+                onmouseover="this.style.transform='scale(1.03)';" onmouseout="this.style.transform='scale(1)';">
+
+                <img src="assets/images/hcare1.avif" alt="Hair Therapy"
+                    style="width: 100%; border-radius: 12px; margin-bottom: 25px; transition: 0.4s;"
+                    onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+
+                <h2 style="color: #28a745; font-size: 34px;">Advanced Hair Therapy</h2>
+                <p style="color: #555; font-size: 18px; line-height: 1.8; margin-bottom: 20px;">
+                    Rejuvenate your hair with our premium Ayurvedic treatments. Say goodbye to dandruff, hair fall, and
+                    scalp issues naturally.
+                </p>
+                <button
+                    style="background: #28a745; color: white; padding: 12px 35px; border: none; border-radius: 8px; cursor: pointer; transition: 0.3s;"
+                    onmouseover="this.style.background='#218838';" onmouseout="this.style.background='#28a745';">
+                    Discover More
+                </button>
+
+                <!-- Decorative Element -->
+                <div
+                    style="position: absolute; bottom: -50px; right: -50px; width: 120px; height: 120px; background: #28a745; opacity: 0.1; border-radius: 50%;">
+                </div>
+            </div>
+
+            <!-- Small Image Grid -->
+            <div style="width: 40%; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+
+                <!-- Small Image 1 -->
+                <div style="overflow: hidden; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: 0.4s; position: relative; cursor: pointer;"
+                    onmouseover="this.style.transform='rotate(-5deg) scale(1.1)';"
+                    onmouseout="this.style.transform='rotate(0deg) scale(1)';">
+                    <img src="assets/images/hcare2.avif" alt="Hair Oil"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <h3
+                        style="position: absolute; bottom: 15px; left: 15px; color: white; background: #28a745; padding: 8px 16px; border-radius: 8px;">
+                        Hair Oil Therapy</h3>
+                </div>
+
+                <!-- Small Image 2 -->
+                <div style="overflow: hidden; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: 0.4s; position: relative; cursor: pointer;"
+                    onmouseover="this.style.transform='rotate(5deg) scale(1.1)';"
+                    onmouseout="this.style.transform='rotate(0deg) scale(1)';">
+                    <img src="assets/images/hcare3.avif" alt="Scalp Care"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <h3
+                        style="position: absolute; bottom: 15px; left: 15px; color: white; background: #007bff; padding: 8px 16px; border-radius: 8px;">
+                        Scalp Nourishment</h3>
+                </div>
+
+                <!-- Small Image 3 -->
+                <div style="overflow: hidden; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: 0.4s; position: relative; cursor: pointer;"
+                    onmouseover="this.style.transform='rotate(-5deg) scale(1.1)';"
+                    onmouseout="this.style.transform='rotate(0deg) scale(1)';">
+                    <img src="assets/images/hcare4.avif" alt="Hair Spa"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <h3
+                        style="position: absolute; bottom: 15px; left: 15px; color: white; background: #ff6347; padding: 8px 16px; border-radius: 8px;">
+                        Hair Spa</h3>
+                </div>
+
+                <!-- Small Image 4 -->
+                <div style="overflow: hidden; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); transition: 0.4s; position: relative; cursor: pointer;"
+                    onmouseover="this.style.transform='rotate(5deg) scale(1.1)';"
+                    onmouseout="this.style.transform='rotate(0deg) scale(1)';">
+                    <img src="assets/images/hcare5.avif" alt="Dandruff Control"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <h3
+                        style="position: absolute; bottom: 15px; left: 15px; color: white; background: #ffc107; padding: 8px 16px; border-radius: 8px;">
+                        Dandruff Control</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- haircare-end -->
+    <!-- 3rd -start -->
+    <div style="padding: 80px; background: linear-gradient(135deg, #f5f7fa, #d3e0ea); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1); border-radius: 15px; transition: 0.5s; max-width: 1200px; margin: 60px auto; overflow: hidden; position: relative;" id="detoxcleans">
+
+        <!-- Section Title -->
+        <h1 style="font-size: 50px; color: #222; text-align: center; margin-bottom: 50px; letter-spacing: 1px;">
+            Detox & <span style="color: #28a745; text-shadow: 0 0 12px #28a745;">Cleansing</span>
+        </h1>
+    
+        <!-- Section Content -->
+        <div class="content-wrapper" style="display: flex; justify-content: space-between; gap: 40px; align-items: center;">
+    
+            <!-- Left Image with Glow -->
+            <div class="image-box" style="flex: 1; position: relative; transition: 0.4s; overflow: hidden; border-radius: 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.2);"
+                onmouseover="this.style.transform='rotate(-2deg) scale(1.1)';"
+                onmouseout="this.style.transform='rotate(0deg) scale(1)';">
+    
+                <img src="assets/images/clean.avif" alt="Detox Therapy"
+                    style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s;"
+                    onmouseover="this.style.filter='blur(5px)'; this.style.opacity='0.9';"
+                    onmouseout="this.style.filter='blur(0)'; this.style.opacity='1';">
+    
+                <!-- Overlay Text -->
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; opacity: 0; transition: 0.5s; font-size: 26px; font-weight: bold;"
+                    onmouseover="this.style.opacity='1';" onmouseout="this.style.opacity='0';">
+                    Deep Detox
+                </div>
+    
+            </div>
+    
+            <!-- Right Content -->
+            <div class="content-box" style="flex: 1; padding: 40px; background: rgba(255, 255, 255, 0.9); border-radius: 15px; box-shadow: 0 12px 35px rgba(0,0,0,0.1); transition: 0.4s;"
+                onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+    
+                <h2 style="color: #28a745; font-size: 40px; margin-bottom: 20px; letter-spacing: 1px;">Full Body Detox</h2>
+    
+                <p style="color: #555; font-size: 18px; line-height: 1.8; margin-bottom: 30px;">
+                    Cleanse your body from toxins naturally with Ayurvedic detox treatments.
+                    Improve digestion, purify your blood, and revitalize your skin with organic herbs.
+                </p>
+    
+                <div class="image-grid" style="display: flex; justify-content: space-between; gap: 20px;">
+    
+                    <!-- Small Image 1 -->
+                    <div style="flex: 1; transition: 0.5s; overflow: hidden; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); cursor: pointer;"
+                        onmouseover="this.style.transform='translateY(-10px)';"
+                        onmouseout="this.style.transform='translateY(0)';">
+                        <img src="assets/images/herbal.avif" alt="Herbal Tea" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+    
+                    <!-- Small Image 2 -->
+                    <div style="flex: 1; transition: 0.5s; overflow: hidden; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); cursor: pointer;"
+                        onmouseover="this.style.transform='translateY(-10px)';"
+                        onmouseout="this.style.transform='translateY(0)';">
+                        <img src="assets/images/dwater.avif" alt="Detox Water" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+    
+                    <!-- Small Image 3 -->
+                    <div style="flex: 1; transition: 0.5s; overflow: hidden; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); cursor: pointer;"
+                        onmouseover="this.style.transform='translateY(-10px)';"
+                        onmouseout="this.style.transform='translateY(0)';">
+                        <img src="assets/images/juice.avif" alt="Juice Therapy" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+    
+                </div>
+    
+                <!-- Button -->
+                <div style="text-align: center; margin-top: 30px;">
+                    <button style="background: #28a745; color: white; padding: 12px 35px; border: none; border-radius: 8px; cursor: pointer; transition: 0.3s;"
+                        onmouseover="this.style.background='#218838';" onmouseout="this.style.background='#28a745';">
+                        Explore More
+                    </button>
+                </div>
+    
+            </div>
+    
+        </div>
+    
+        <!-- Floating Text Animation -->
+        <div style="position: absolute; top: 10%; left: 5%; color: #28a745; font-size: 80px; font-weight: bold; opacity: 0.05; z-index: -1; animation: float 8s infinite alternate;">
+            Detox
+        </div>
+    
+        <div style="position: absolute; bottom: 10%; right: 5%; color: #28a745; font-size: 80px; font-weight: bold; opacity: 0.05; z-index: -1; animation: float 8s infinite alternate-reverse;">
+            Cleanse
+        </div>
+    
+    </div>
+    
+    <!-- 3rd -end -->
+    <!-- footer-start -->
+    <footer>
+        <div style="background: #000; color: #fff; padding: 60px 20px;">
+            <div
+                style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+
+                <!-- Top Products -->
+                <div style="flex: 1 1 calc(25% - 20px); min-width: 250px; margin-bottom: 30px;">
+                    <h5 style="font-weight: bold; margin-bottom: 20px;">Top Products</h5>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">Black Organic
+                                Tea</a></li>
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">Loose Leaf Tea</a>
+                        </li>
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">Oolong Tea</a>
+                        </li>
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">Green Tea</a></li>
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">Sencha Tea</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Legal Information -->
+                <div style="flex: 1 1 calc(25% - 20px); min-width: 250px; margin-bottom: 30px;">
+                    <h5 style="font-weight: bold; margin-bottom: 20px;">Legal Information</h5>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">About Us</a></li>
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">Privacy Policy</a>
+                        </li>
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">Terms &
+                                Conditions</a></li>
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">Customer
+                                Service</a></li>
+                        <li><a href="#" style="color: #bbb; text-decoration: none; transition: 0.3s;">Return Policy</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter & About -->
+                <div style="flex: 1 1 calc(50% - 20px); min-width: 300px; margin-bottom: 30px;">
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <i style="font-size: 28px; color: #198754; margin-right: 10px;">🍃</i>
+                        <h5 style="margin: 0;">Pure Ayurveda</h5>
+                    </div>
+
+                    <div style="display: flex; background: #fff; border-radius: 50px; padding: 5px; overflow: hidden;">
+                        <input type="email" placeholder="Subscribe newsletter"
+                            style="border: none; outline: none; padding: 10px 15px; width: 70%; font-size: 14px;">
+                        <button
+                            style="background: #198754; color: #fff; border: none; padding: 10px 25px; border-radius: 50px; cursor: pointer; transition: 0.3s;">Subscribe
+                            Now</button>
+                    </div>
+
+                    <p style="margin-top: 20px; font-size: 14px; color: #bbb;">
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div
+            style="background: #198754; color: #000; text-align: center; padding: 15px 0; font-size: 14px; width: 100%;">
+            Copyright © 2020-2023. All right reserved. Pure Ayurveda
+        </div>
+    </footer>
+
+    <!-- footer-end -->
+    <button class="btn btn-sm btn-primary rounded-circle position-fixed bottom-0 end-0 translate-middle d-none"
+        onclick="scrollToTop()" id="back-to-up">
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </button>
+    <!-- Online js link attachment -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>window.onscroll = () => {
+            toggleTopButton();
+        }
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleTopButton() {
+            if (document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20) {
+                document.getElementById('back-to-up').classList.remove('d-none');
+            } else {
+                document.getElementById('back-to-up').classList.add('d-none');
+            }
+        }</script>
+</body>
+
+</html>
