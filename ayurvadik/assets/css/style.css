@@ -1,0 +1,991 @@
+/* header-start */
+.navbar {
+  background-color: transparent !important;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+  background-color: rgba(245, 245, 220, 0.9);
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  color: #8B5E3B;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #4CAF50;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #4CAF50;
+}
+
+.navbar-nav .nav-link:hover::before {
+  transform: scaleX(1);
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  color: #8B5E3B;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-item:first-child .nav-link {
+  color: #4CAF50 !important;
+}
+
+.navbar-nav .nav-item:first-child .nav-link:hover {
+  color: white !important;
+}
+
+.navbar-nav .nav-item:first-child .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 3px;
+  background-color: #4CAF50;
+  display: block;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  color: #8B5E3B;
+  padding: 8px 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  background: #4CAF50;
+  color: #F5F5DC !important;
+  box-shadow: 0px 4px 10px rgba(76, 175, 80, 0.3);
+}
+
+.navbar-nav .nav-item a i {
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-item a:hover i {
+  color: white !important;
+  transform: scale(1.2);
+  color: #8B5E3B;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4CAF50 !important;
+
+}
+
+.navbar {
+  background-color: rgba(245, 245, 220, 0.8) !important;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 12px 20px;
+}
+
+.navbar.scrolled {
+  background-color: rgba(245, 245, 220, 1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav {
+  gap: 20px;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  color: #8B5E3B;
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: all 0.4s ease-in-out;
+}
+
+.navbar-nav .nav-item:first-child .nav-link {
+  color: #4CAF50 !important;
+}
+
+.navbar-nav .nav-item:first-child .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background-color: #4CAF50;
+  display: block;
+}
+
+.dropdown-menu {
+  background-color: #F5F5DC;
+  border: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  padding: 10px 0;
+}
+
+.dropdown-item {
+  color: #8B5E3B;
+  padding: 10px 20px;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.dropdown-item:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navbar-nav .nav-item a i {
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-item a:hover i {
+  transform: scale(1.2);
+  color: #4CAF50;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 2px solid #4CAF50;
+  border-radius: 20px;
+  padding: 5px 10px;
+  background: white;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  width: 180px;
+  padding: 5px;
+}
+
+.search-box button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4CAF50;
+  font-size: 16px;
+}
+
+@media (max-width: 992px) {
+  .navbar-nav {
+    gap: 10px;
+  }
+
+  .search-box input {
+    width: 120px;
+  }
+}
+
+/* header-end */
+/* banner-start */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background: url('../images/background.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.banner .container {
+  position: relative;
+  z-index: 2;
+}
+
+.banner h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.banner p {
+  font-size: 1.2rem;
+  margin: 10px 0 20px;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #ffb703, #ff7c08);
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  border-radius: 30px;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(45deg, #ff7c08, #ffb703);
+  transform: scale(1.1);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(20px) rotate(10deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .banner h1 {
+    font-size: 2.2rem;
+  }
+
+  .banner p {
+    font-size: 1rem;
+  }
+}
+
+/* banner-end */
+
+/* treatment-start */
+
+@media (max-width: 1200px) {
+  .circle-container {
+    width: 400px;
+    height: 400px;
+  }
+
+  .feature {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .circle-container {
+    width: 300px;
+    height: 300px;
+  }
+
+  .feature {
+    font-size: 14px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .feature .line {
+    width: 50px;
+    margin: 10px 0;
+  }
+}
+
+/* treatment-end */
+/* footer-start */
+@media (max-width: 768px) {
+  .footer .newsletter {
+    flex-direction: column;
+  }
+
+  .footer input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .footer button {
+    width: 100%;
+  }
+}
+
+/* footer-end */
+/* procedure-start */
+.procedures-section {
+  padding: 80px 0;
+  background: #E0E4E0;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  color: #595959;
+  font-weight: bold;
+}
+
+.section-subtitle {
+  font-style: italic;
+  color: #8E8E8E;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.step-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  border: 1px solid #ddd;
+}
+
+.step-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.icon-circle {
+  width: 120px;
+  height: 120px;
+  border: 4px solid #198754;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: 0.3s;
+}
+
+.icon-circle img {
+  width: 60px;
+  height: 60px;
+}
+
+.step-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #595959;
+}
+
+.step-subtitle {
+  font-size: 18px;
+  color: #7A7A7A;
+  margin: 10px 0;
+}
+
+.step-text {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+}
+
+.top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #198754;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 50%;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.top-btn:hover {
+  background: #165f45;
+}
+
+@media (max-width: 991px) {
+  .step-card {
+    margin-bottom: 30px;
+  }
+}
+
+/* procedure-end */
+/* section-start */
+.mission-section {
+  padding: 80px 0;
+  background: #f6f6f6;
+}
+
+.mission-text h5 {
+  font-style: italic;
+  color: #8E8E8E;
+  font-size: 18px;
+}
+
+.mission-text h2 {
+  font-size: 42px;
+  font-weight: bold;
+  color: #198754;
+}
+
+.mission-text p {
+  font-size: 18px;
+  color: #7A7A7A;
+  line-height: 1.8;
+}
+
+.mission-text .btn {
+  background: #198754;
+  color: #fff;
+  font-size: 18px;
+  padding: 12px 30px;
+  border-radius: 30px;
+  transition: 0.3s;
+  border: none;
+}
+
+.mission-text .btn:hover {
+  background: #8B938B;
+}
+
+.img-box {
+  position: relative;
+}
+
+.main-img {
+  width: 100%;
+  border: 6px solid #D3D8D3;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.small-img {
+  position: absolute;
+  bottom: -40px;
+  left: 30px;
+  width: 200px;
+  border: 4px solid #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  border-radius: 8px;
+}
+
+.small-img:hover {
+  transform: scale(1.05);
+}
+
+.top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #7A7A7A;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50%;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.top-btn:hover {
+  background: #555;
+}
+
+@media (max-width: 991px) {
+  .small-img {
+    width: 150px;
+    bottom: -30px;
+    left: 15px;
+  }
+}
+
+/* section-end */
+.categories {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.categories h2 {
+  font-size: 42px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.categories p {
+  color: #777;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.category-card {
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.category-card:hover img {
+  transform: scale(1.1);
+}
+
+.category-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.category-card:hover .category-overlay {
+  opacity: 1;
+}
+
+.category-overlay h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@media (max-width: 991px) {
+  .category-overlay h3 {
+    font-size: 20px;
+  }
+}
+
+/* section-end */
+/* Mobile par hide, baaki screens par show */
+@media screen and (max-width: 575px) {
+  .why-ayurveda {
+    display: none;
+    /* Mobile par hide */
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .why-ayurveda {
+    display: block;
+    /* Baaki screens par show */
+  }
+}
+
+/* Card Styling */
+.card {
+  border: 1px solid #eee;
+  transition: 0.3s;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styling */
+.btn-custom:hover {
+  background-color: #198754;
+}
+
+/* Content Styling */
+.content-section h3 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.content-section p {
+  color: #555;
+}
+
+.content-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.content-section li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.content-section li::before {
+  content: "✔️";
+  color: #198754;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+/* contact-start */
+@media (max-width: 992px) {
+  .wellness-card {
+    flex: 1 1 calc(50% - 20px);
+    /* 2 cards row me */
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 575px) {
+  .wellness-card {
+    flex: 1 1 100%;
+    /* 1 card row me */
+    max-width: 100%;
+  }
+}
+
+/* contact-end */
+/* choose-start */
+.achievement-card {
+  border: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  text-align: center;
+  transition: 0.5s;
+  cursor: pointer;
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 250px;
+}
+
+.achievement-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  background: #198754;
+  color: #fff;
+}
+
+.achievement-card img {
+  width: 150px;
+  height: 100px;
+  margin: 0 auto;
+  transition: 0.5s;
+}
+
+.achievement-card:hover img {
+  transform: rotate(360deg) scale(1.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .achievement-card {
+    max-width: 100%;
+  }
+}
+
+/* choose-end */
+/* our-sunscreen-start */
+.section-title {
+  text-align: center;
+  padding: 60px 0 30px;
+  background: #f1f1f1;
+}
+
+.section-title h1 {
+  font-size: 40px;
+  color: #000;
+  font-weight: 600;
+}
+
+.section-title span {
+  color: #138b2f;
+  font-weight: bold;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.product-card h3 {
+  font-size: 22px;
+  margin: 15px 0;
+  color: #333;
+}
+
+.product-card p {
+  color: #28a745;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.rating {
+  color: #ffc107;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.btn-add {
+  background: #28a745;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-add:hover {
+  background: #218838;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .product-card img {
+      height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-card img {
+      height: 180px;
+  }
+}
+/* our-sunscreen-end */
+/* treatment-section-start */
+/* Responsive Design */
+@media (max-width: 1024px) {
+  div > div {
+      width: 45% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  div > div {
+      width: 90% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  div > div {
+      width: 100% !important;
+  }
+}
+
+/* treatment-section-end */
+/* hair-care-start */
+/* === Responsive Media Queries === */
+
+/* ✅ Tablet and Smaller Screens */
+@media (max-width: 1024px) {
+    .content-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .image-box, .content-box {
+        width: 100% !important;
+    }
+
+    .image-grid {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .image-grid div {
+        flex: 1 1 calc(50% - 15px);
+    }
+}
+
+/* ✅ Mobile Screens */
+@media (max-width: 768px) {
+    .image-grid div {
+        flex: 1 1 100%;
+    }
+
+    h1 {
+        font-size: 36px !important;
+    }
+
+    h2 {
+        font-size: 30px !important;
+    }
+}
+
+/* ✅ Small Mobile Screens */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px !important;
+    }
+
+    h2 {
+        font-size: 24px !important;
+    }
+
+    p {
+        font-size: 16px !important;
+    }
+}
+
+/* hair-care-end */
+
+/* haircare-start */
+@media screen and (max-width: 1024px) {
+  #haircare {
+      padding: 40px;
+      max-width: 100%;
+  }
+
+  #haircare h1 {
+      font-size: 36px;
+      margin-bottom: 30px;
+  }
+
+  #haircare > div {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  #haircare > div > div {
+      width: 100%;
+  }
+
+  #haircare > div > div img {
+      height: auto;
+  }
+
+  #haircare button {
+      padding: 10px 25px;
+      font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #haircare {
+      padding: 30px;
+      max-width: 100%;
+  }
+
+  #haircare h1 {
+      font-size: 32px;
+      margin-bottom: 25px;
+  }
+
+  #haircare > div {
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  #haircare > div > div {
+      width: 100%;
+      padding: 30px;
+  }
+
+  #haircare > div > div img {
+      height: auto;
+      width: 100%;
+  }
+
+  #haircare h2 {
+      font-size: 28px;
+  }
+
+  #haircare p {
+      font-size: 16px;
+      line-height: 1.6;
+  }
+
+  #haircare button {
+      padding: 10px 20px;
+      font-size: 14px;
+  }
+
+  #haircare > div > div h3 {
+      font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #haircare {
+      padding: 20px;
+      max-width: 100%;
+  }
+
+  #haircare h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+  }
+
+  #haircare > div {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  #haircare > div > div {
+      width: 100%;
+      padding: 20px;
+  }
+
+  #haircare > div > div img {
+      height: auto;
+      width: 100%;
+  }
+
+  #haircare h2 {
+      font-size: 24px;
+  }
+
+  #haircare p {
+      font-size: 14px;
+      line-height: 1.5;
+  }
+
+  #haircare button {
+      padding: 8px 18px;
+      font-size: 12px;
+  }
+
+  #haircare > div > div h3 {
+      font-size: 14px;
+  }
+}
+/* haircare-end */
